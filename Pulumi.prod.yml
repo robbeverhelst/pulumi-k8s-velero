@@ -1,0 +1,11 @@
+encryptionsalt: v1:qaLi+eUUpwU=:v1:ABBnfU4XYgqnYyUN:b4QLi5Qzhqd7OHA6GUk5gpqUoP7F4Q==
+config:
+  velero:version: 10.1.0
+  velero:namespace: velero
+  velero:minio.endpoint: http://192.168.1.195:9000
+  velero:minio.bucket: velero-backups
+  velero:minio.region: us-east-1
+  velero:minio.accesskey: minioadmin
+  velero:minio.secretkey: minioadmin
+  velero:backup.schedule: 0 2 * * *
+  velero:backup.retention: 240h
