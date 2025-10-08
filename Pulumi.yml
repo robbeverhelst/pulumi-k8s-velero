@@ -1,0 +1,21 @@
+name: velero
+runtime: nodejs
+description: Kubernetes backup and disaster recovery with Velero
+
+template:
+  config:
+    velero:version:
+      description: The Velero Helm chart version to use
+      default: "10.1.0"
+    velero:namespace:
+      description: The Kubernetes namespace for Velero
+      default: velero
+    velero:minio.endpoint:
+      description: Minio endpoint for backup storage
+      default: "http://192.168.1.195:9000"
+    velero:minio.bucket:
+      description: Minio bucket for Velero backups
+      default: "velero-backups"
+    velero:minio.region:
+      description: Minio region
+      default: "us-east-1"
